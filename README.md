@@ -151,9 +151,46 @@ int main() {
 
 ```
 ## OUTPUT
-$ ./shm2.o
-$ ./shm1.o
-$ ipcs
+### $ ./shm2.o
+```
+darshanig@Darshani-laptop:~$ ./shm2.o
+Shared memory id = 0
+Memory Attached at f727d000
+Enter Some Text: hello
+waiting for client.
+waiting for client.
+Enter Some Text: hi
+waiting for client.
+waiting for client.
+waiting for client.
+Enter Some Text: operating systems
+waiting for client.
+waiting for client.
+```
+### $ ./shm1.o
+```
+darshanig@Darshani-laptop:~$ ./shm1.o
+Shared memory id is 0
+Memory Attached at 48d89000
+You Wrote: hello
+You Wrote: hi
+You Wrote: operating systems
+```
+### $ ipcs
+```
+darshanig@Darshani-laptop:~$ ipcs
+
+------ Message Queues --------
+key        msqid      owner      perms      used-bytes   messages
+
+------ Shared Memory Segments --------
+key        shmid      owner      perms      bytes      nattch     status
+0x000004d2 0          darshanig  666        2052       1
+
+
+------ Semaphore Arrays --------
+key        semid      owner      perms      nsems
+```
 
 # RESULT:
 The program is executed successfully.
