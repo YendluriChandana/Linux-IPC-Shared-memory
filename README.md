@@ -192,5 +192,5 @@ key        shmid      owner      perms      bytes      nattch     status
 key        semid      owner      perms      nsems
 ```
 
-# RESULT:
+# RESULT :
 The program is executed successfully.
